@@ -40,6 +40,8 @@ def sorted_capacity(homes)
 	end
 end
 
+# print_homes(homes)
+
 def user_sorting(homes)
 	puts "You have the choice to sort by price or capacity - choose wisely..."
 	choice = gets.chomp.upcase
@@ -54,6 +56,8 @@ def user_sorting(homes)
 	end
 end
 
+# user_sorting(homes)
+
 def user_selecting(homes)
 	puts "Which city do you select?"
 	city_choice = gets.chomp.capitalize
@@ -64,6 +68,15 @@ end
 print_homes(selected_city)
 end
 
-# print_homes(homes)
-# user_sorting(homes)
-user_selecting(homes)
+# user_selecting(homes)
+
+def average (homes)
+# use reduce
+  total_capacities = homes.reduce(0.0) do | sum, home |
+	sum + home.capacity
+  end
+  puts total_capacities / homes.length
+end
+
+# average(homes)
+

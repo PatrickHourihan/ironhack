@@ -24,7 +24,7 @@ homes = [
 
 def print_homes(homes)
 	homes.each do | home |
-		  puts "#{home.name} in #{home.city} for #{home.price}. Capacity: #{home.capacity}"
+		  puts "#{home.name} in #{home.city} has a capacity of #{home.capacity}. Price: #{home.price}"
 	end
 end
 
@@ -54,6 +54,16 @@ def user_sorting(homes)
 	end
 end
 
+def user_selecting(homes)
+	puts "Which city do you select?"
+	city_choice = gets.chomp.capitalize
+# now I have the user's selected city. i need to use select to filter through each home in the homes array, compare to the users input, and puts the selected_city
+	selected_city = homes.select do |home|
+		home.city == city_choice
+end
+print_homes(selected_city)
+end
 
 # print_homes(homes)
-user_sorting(homes)
+# user_sorting(homes)
+user_selecting(homes)

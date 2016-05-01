@@ -1,1 +1,5 @@
 puts "Yay, day zero. It's so much fun without Josh." 
+puts "I am changing my file so that Faraz can see that git and github are working properly for me."
+puts "blah"
+puts "I am making another change to the file to see if git will ask for my user name"
+puts "change"

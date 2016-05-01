@@ -1,4 +1,4 @@
-require_relative('lib/ShoppingCart')
+require_relative('lib/shopping-cart')
 require_relative('lib/item')
 require_relative('lib/fruit')
 require_relative('lib/houseware')

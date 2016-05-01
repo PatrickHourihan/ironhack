@@ -62,15 +62,15 @@ def user_selecting(homes)
 	puts "Which city do you select?"
 	city_choice = gets.chomp.capitalize
 # now I have the user's selected city. i need to use select to filter through each home in the homes array, compare to the users input, and puts the selected_city
-	selected_city = homes.select do |home|
+	selected_city = homes.select do | home |
 		home.city == city_choice
-end
+	end
 print_homes(selected_city)
 end
 
 # user_selecting(homes)
 
-def average (homes)
+def average(homes)
 # use reduce
   total_capacities = homes.reduce(0.0) do | sum, home |
 	sum + home.capacity
@@ -80,3 +80,14 @@ end
 
 # average(homes)
 
+def find_price(homes)
+# use find, will be similar to select
+	puts "Enter a price."
+	price_choice = gets.chomp
+	selected_price = homes.select do | home |
+		home.price == price_choice.to_i 
+	end
+print_homes(selected_price)
+end
+
+find_price(homes)

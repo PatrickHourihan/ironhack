@@ -25,10 +25,14 @@ homes = [
 
 # EXERCISE - each
 
-# homes.each do | home |
-# 	puts "#{home.name} in #{home.city}
-# Price: $#{home.price} a night"
-# end
+def print_homes(homes)
+  homes.each do | home |
+	puts "#{home.name} in #{home.city}
+Price: $#{home.price} a night"
+  end
+end
+
+print_homes(homes)
 
 # EXERCISE - map
 
@@ -55,16 +59,26 @@ homes = [
 #   puts "Home Number #{index + 1}: #{hm.name}"
 # end
 
-# # Homes in San Juan
+# Homes in San Juan
 # san_juan_homes = homes.select do | home |
 #   # Keep home only if its city is "San Juan"
 #   home.city == "San Juan"
 # end
+# def san_juan_homes(homes)
+#   homes.select! do | home | 
+#     home.city == "San Juan"
+#   end
+# end
 
-# # Homes with capacity 4 or more
+# Homes with capacity 4 or more
 # high_capacity_homes = homes.select do | home |
 #   # Keep home only if its capacity is 4 or greater
 #   home.capacity >= 4
+# end
+# def high_capacity_homes(homes)
+#   homes.select do | home | 
+#     home.capacity >= 4
+#   end
 # end
 
 # home_41_dollars = homes.find do |hm|

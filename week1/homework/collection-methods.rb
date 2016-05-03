@@ -60,15 +60,14 @@ print_homes(homes)
 # end
 
 # Homes in San Juan
-# san_juan_homes = homes.select do | home |
+# def san_juan_homes(homes) 
+#   homes.select! do | home |
 #   # Keep home only if its city is "San Juan"
 #   home.city == "San Juan"
-# end
-# def san_juan_homes(homes)
-#   homes.select! do | home | 
-#     home.city == "San Juan"
 #   end
 # end
+
+# puts san_juan_homes(homes)
 
 # Homes with capacity 4 or more
 # high_capacity_homes = homes.select do | home |

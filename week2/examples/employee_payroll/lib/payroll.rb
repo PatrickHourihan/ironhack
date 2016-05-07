@@ -7,7 +7,7 @@ class Payroll
 
 	def pay_employees
 		@employees.each do | employee |
-			puts "#{employee.name} gets paid #{employee.calculate_salary}"
+			puts "#{employee.name} gets paid #{employee.calculate_payment}"
 		end
 	end
 

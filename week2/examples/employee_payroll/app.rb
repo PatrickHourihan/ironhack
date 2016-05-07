@@ -1,5 +1,7 @@
 require_relative('lib/employeepayroll')
 require_relative('lib/payroll')
+require_relative('lib/hourlyemployee')
+require_relative('lib/salariedemployee')
 
 josh = HourlyEmployee.new('Josh', 'nachoemail@example.com', 35, 50)
 nizar = SalariedEmployee.new('Nizar', 'starcraftrulez@gmail.com', 100000)
@@ -11,6 +13,6 @@ payroll = Payroll.new(employees)
 
 payroll.pay_employees
 
-# puts josh.calculate_salary 
+# puts josh.calculate_payment 
 # puts nizar.calculate_salary
 # puts ted.calculate_salary

@@ -57,6 +57,8 @@ vaccuum_cleaner = Houseware.new("Vaccuum Cleaner", 150)
 orange_juice = Item.new("Orange Juice", 10)
 rice = Item.new("Rice", 1)
 anchovies = Item.new("Anchovies", 2)
+fruity_pebbles = Item.new("Fruity Pebbles", 20)
+raspberry = Fruit.new("Raspberry", 1)
 
 # My Cart
 my_cart = ShoppingCart.new
@@ -64,5 +66,6 @@ my_cart.add_to_cart(banana)
 my_cart.add_to_cart(banana)
 my_cart.add_to_cart(vaccuum_cleaner)
 my_cart.add_to_cart(rice)
+my_cart.add_to_cart(raspberry)
 
 puts "Your total today is $#{my_cart.checkout}. Have a nice day!"

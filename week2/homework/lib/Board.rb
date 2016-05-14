@@ -32,14 +32,56 @@ class Board
 			return winner?
 	end
 
+	def board_with_numbers
+			board_container = ""
+			@board.each do | row |
+				row.each do | cell | 
+					i = 0
+					if cell.empty?
+						board_container += " | _i + 1_ "
+					else
+						board_container += " | _#{cell}_ "
+					end
+				end
+				board_container += "|\n--+---+--+---+--+---+--\n"
+			end
+			puts board_container
+			puts "\n"
+	end
+
+	def cheat_numbered_board
+		puts "
+  | _1_  | _2_  | _3_ |
+ --+---+--+---+--+---+--
+  | _4_  | _5_  | _6_ |
+ --+---+--+---+--+---+--
+  | _7_  | _8_  | _9_ |
+ --+---+--+---+--+---+--
+
+"
+	end
+
+	def location_to_number
+		"1" == @board[0][0]
+		"2" == @board[0][1]
+		"3" == @board[0][2]
+		"4" == @board[1][0]
+		"5" == @board[1][1]
+		"6" == @board[1][2]
+		"7" == @board[2][0]
+		"8" == @board[2][1]
+		"9" == @board[2][2]
+	end
+
 	def add_character(location, marker)
+		@location = location
 		@marker = marker
 		x = location [1]
 		y = location [0]
 		if (@board[y][x]).empty?
 			@board[y][x] = "#{@marker}"
 		else
-			puts "#{@marker} is taken!! please choose another space, please."
+			puts "#{@location} is taken!! please choose another space, please."
 			puts "\n"
 		end
 	end	

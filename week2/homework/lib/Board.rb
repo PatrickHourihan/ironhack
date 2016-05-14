@@ -32,24 +32,7 @@ class Board
 			return winner?
 	end
 
-	def board_with_numbers
-			board_container = ""
-			@board.each do | row |
-				row.each do | cell | 
-					i = 0
-					if cell.empty?
-						board_container += " | _i + 1_ "
-					else
-						board_container += " | _#{cell}_ "
-					end
-				end
-				board_container += "|\n--+---+--+---+--+---+--\n"
-			end
-			puts board_container
-			puts "\n"
-	end
-
-	def cheat_numbered_board
+	def numbered_board
 		puts "
   | _1_  | _2_  | _3_ |
  --+---+--+---+--+---+--

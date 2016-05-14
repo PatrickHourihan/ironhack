@@ -16,10 +16,12 @@ my_board = Board.new
 # my_board.add_character([0,2], "X")
 # my_board.show_board
 # my_board.add_character([2,0], "X")
+# my_board.show_board
 
-my_board.numbered_board
-new_game = Game.new
-new_game.take_turns
+
+# my_board.numbered_board
+# new_game = Game.new
+# new_game.take_turns
 
 # Desired output:
 

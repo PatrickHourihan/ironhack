@@ -6,6 +6,8 @@ class Game
 		puts "please select from one of the following corresponding positions: 1 2 3 4 5 6 7 8 9"
 		turn1 = gets.chomp
 		puts "you have selected #{turn1}!"
+		# puts Board.add_character
+		# puts Board.show_board
 	end
 
 end

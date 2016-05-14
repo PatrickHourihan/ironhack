@@ -94,3 +94,14 @@ Hiring week
 Mock interviews
 Coding challenges
 Meet your potential employers
+
+Thinking about enrolling in our bootcamp but don't know if you're the right fit? We're mainly looking for people who are passionate about technology and learn quickly
+
+Some of the student profiles that have enrolled in our Web Development Bootcamp
+
+Career changers: all sorts of people that want to break into tech. From bankers to flight attendants.
+Designers who want to learn programming
+Marketers who want to become growth hackers
+CS Majors who want to sharpen their practical, real-world development skills
+Entrepreneurs who want to get to understand the technical side
+Experienced developers who want to retool

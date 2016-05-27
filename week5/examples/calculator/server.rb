@@ -3,7 +3,7 @@
 require "sinatra"
 
 get "/" do
-  "You can <a href='http://localhost:4567/operate'>OPERATE</a>, or: <a href='http://localhost:4567/add'>add</a>, <a href='http://localhost:4567/subtract'>subtract</a>, <a href='http://localhost:4567/multiply'>multiply</a> and <a href='http://localhost:4567/divide'>divide</a>"
+  erb(:home)
 end
 
 get "/operate" do 

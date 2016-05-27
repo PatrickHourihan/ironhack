@@ -1,0 +1,21 @@
+<!--views/home.erb-->
+<!doctype html>
+<html>
+<head>
+	<title>Online Calculator</title>
+</head>
+<body>
+	<h1>You can <a href='http://localhost:4567/operate'>OPERATE</a>, or: <a href='http://localhost:4567/add'>add</a>, <a href='http://localhost:4567/subtract'>subtract</a>, <a href='http://localhost:4567/multiply'>multiply</a> and <a href='http://localhost:4567/divide'>divide</a></h1>
+	
+<form action="/calculate" method="POST">
+  <input type="number" name="first_number" placeholder="1st number"> 
+  <input type="number" name="second_number" placeholder="2nd number">
+
+	<button type="submit" name="operation" value="add">Add</button>
+	<button type="submit" name="operation" value="subtract">Subtract</button>
+	<button type="submit" name="operation" value="multiply">Multiply</button>
+	<button type="submit" name="operation" value="divide">Divide</button>
+</form>
+
+</body>
+</html>

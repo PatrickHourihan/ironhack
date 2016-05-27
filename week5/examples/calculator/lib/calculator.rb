@@ -33,8 +33,8 @@ class Calculator
 	end
 end
 
-test_calculator = Calculator.new
-test_calculator.add
-test_calculator.subtract
-test_calculator.multiply
-test_calculator.divide
+# test_calculator = Calculator.new
+# test_calculator.add
+# test_calculator.subtract
+# test_calculator.multiply
+# test_calculator.divide

@@ -1,0 +1,24 @@
+<!--views/task_index.erb-->
+<!doctype html>
+<html>
+<head>
+	<title>To Do List</title>
+</head>
+
+<body>
+<h1>Welcome to the TodoList</h1>
+<ul>
+<% @list.each do | task | %>
+	<% if task.complete? %>
+		 <li><%= task.content %> <a href="/complete_task/<%= task.id %>">Complete Task</a> Complete</li>
+		<form action="/delete" method="POST" >
+		 <button type="submit" name="task_id" value="<%=task.id%>" >Delete</button>
+		</form>
+	<% else %>
+		<li><%= task.content %> <a href="/complete_task/<%= task.id %>">Complete Task</a></li>
+	<% end %>
+<% end %>
+</ul>
+<a href="/new_task">Create new tasks</a>
+</body>
+</html>

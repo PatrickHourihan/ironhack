@@ -1,0 +1,36 @@
+1. What is HTTP ?
+"The Hypertext Transfer Protocol (HTTP) is an application protocol for distributed, collaborative, hypermedia information systems."
+Accordint to Wikipedia: "The Hypertext Transfer Protocol (HTTP) is an application protocol for distributed, collaborative, hypermedia information systems. HTTP is the foundation of data communication for the World Wide Web. Hypertext is structured text that uses logical links (hyperlinks) between nodes containing text."
+
+2. What does URL mean?
+According to Urban Dictionary: "Uniform Resource Locator, or basically the 
+adress for those of you n00bs, as in www.google.com is a fucking URL"
+
+3. How many parts has a URL? Name them and describe them.
+According to GoDaddy: "A URL technically has five parts: the protocol, the domain name, the path, the directory and the file name. Consider the URL http://coolexample.com/funky/music.html. The protocol is http://, the domain name is coolexample.com, the path is /funky/music.html, the directory is /funky/ and the file name is /music.html."
+From other research, following the file name will be parameters - The parameters are passed in a "kew=value" format and parameters in the list are separated from each other by a character + "&".
+
+4. What is a port number? What is the default one that all webs usually use.
+According to Wikipedia: "Port numbers are sometimes seen in web or other uniform resource locators (URLs). By default, HTTP uses port 80 and HTTPS uses port 443, but a URL like http://www.example.com:8080/path/ specifies that the web browser connects instead to port 8080 of the HTTP server."
+According to whatismyipaddress.com: "The most commonly used and best known ports are those numbered 0 to 1023 dedicated for Internet use, but they can extend far higher for specialized purposes."
+According to searchnetworking.techtarget.com: "By default, the port number for a Web server is 80."
+
+5. What is a query string?
+
+6. What is a fragment?
+
+7. Describe a simple HTTP transaction and it's parts.
+
+8. Enumerate all the HTTP Request Methods with their purposes
+
+9. What are the safe HTTP methods?
+
+10. What are the parts of an HTTP request message?
+
+11. Describe the following headers: Referer, User-Agent, Accept, Accept-Language, Cookie, If-Modified-Since
+
+12. What are the parts of an HTTP response message?
+
+13. Which category does each range of HTTP status code belong to?
+
+14. Make a list of the most common status codes with a little description of each of them.

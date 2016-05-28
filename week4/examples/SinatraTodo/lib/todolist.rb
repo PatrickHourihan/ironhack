@@ -21,6 +21,10 @@ class TodoList
     	end
     end
 
+    def load_tasks 
+        @tasks
+    end
+
     # def sort_by_created(direction)
     # 	sorted_tasks = @tasks.sort do | task1, task2 |
 

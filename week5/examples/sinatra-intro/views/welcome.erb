@@ -1,0 +1,19 @@
+<!-- views/welcome.erb -->
+<!doctype html>
+
+<html>
+
+<head>
+<h1> Welcome to your profile page <%= @user %>!
+</h1>
+</head>
+
+<body>
+<form action="/logout" method="POST">
+
+
+	<button type="logout" name="logout" value="logout">LOGOUT</button>
+</form>
+</body>
+
+</html>

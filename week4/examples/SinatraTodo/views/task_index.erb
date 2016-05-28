@@ -1,0 +1,17 @@
+<!--views/tasks_index.erb-->
+<!doctype html>
+<html>
+<head>
+	<title>To Do List</title>
+</head>
+
+<body>
+<h1>Welcome to the TodoList</h1>
+<ul>
+<% @list.each do | task | %>
+<li><%= task.content %></li>
+<% end %>
+</ul>
+<a href="/new_task">Create new tasks</a>
+</body>
+</html>

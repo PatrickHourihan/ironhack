@@ -16,21 +16,66 @@ According to whatismyipaddress.com: "The most commonly used and best known ports
 According to searchnetworking.techtarget.com: "By default, the port number for a Web server is 80."
 
 5. What is a query string?
+According to whatis.com: "A query string is a set of characters input to a computer or Web browser and sent to a query program to recover specific information from a database."
+For example: in - http://example.com/over/there?name=ferret ; name=ferret is the query string.
 
 6. What is a fragment?
+According to wikipedia: "In computer hypertext, a fragment identifier is a short string of characters that refers to a resource that is subordinate to another, primary resource. The primary resource is identified by a Uniform Resource Identifier (URI), and the fragment identifier points to the subordinate resource.
 
-7. Describe a simple HTTP transaction and it's parts.
+The fragment identifier introduced by a hash mark # is the optional last part of a URL for a document. It is typically used to identify a portion of that document. The generic syntax is specified in RFC 3986. The hash mark separator in URIs does not belong to the fragment identifier."
+
+7. Describe a simple HTTP transaction and it's parts. 
+An HTTP transaction occurs between a client and server. An HTTP client opens a connection and sends a request message to an HTTP server; the server then returns a response message, usually containing the resource that was requested. After delivering the response, the server closes the connection. 
+This site does a very good job of breaking down a simple HTTP transaction and its parts, http://blog.catchpoint.com/2010/09/17/anatomyhttp/.
 
 8. Enumerate all the HTTP Request Methods with their purposes
+GET - The GET method is used to retrieve information from the given server using a given URI. Requests using GET should only retrieve data and should have no other effect on the data.
+POST - A POST request is used to send data to the server, for example, customer information, file upload, etc. using HTML forms. 
+Head - Same as GET but returns only HTTP headers and no document body
+Put - Uploads a representation of the specified URI
+Delete - Deletes the specified resource
+Options - Returns the HTTP methods that the server supports
+Connect - Converts the request connection to a transparent TCP/IP tunnel
 
 9. What are the safe HTTP methods?
+According to Mozila: "GET, used to retrieve information identified by the request URI. This information may be generated on the fly or the GET may be conditional if any of the If-Modified-Since:, If-Unmodified-Since:, If-Match:, If-None-Match: or If-Range: HTTP headers are set. In that latter case, the information is only sent back if all the conditions are fulfilled.
+HEAD, which is identical to GET but without the message body sent."
 
 10. What are the parts of an HTTP request message?
+According to tutorialspoint.com: "An HTTP client sends an HTTP request to a server in the form of a request message which includes following format:
+- A Request-line
+- Zero or more header (General|Request|Entity) fields followed by CRLF
+- An empty line (i.e., a line with nothing preceding the CRLF) 
+indicating the end of the header fields
+- Optionally a message-body"
 
 11. Describe the following headers: Referer, User-Agent, Accept, Accept-Language, Cookie, If-Modified-Since
+Referer: When visiting a webpage, the referrer or referring page is the URL of the previous webpage from which a link was followed.
+User-Agent: In HTTP, the User-Agent string is often used for content negotiation, where the origin server selects suitable content or operating parameters for the response.
+Accept: The Accept request-header field can be used to specify certain media types which are acceptable for the response. Accept headers can be used to indicate that the request is specifically limited to a small set of desired types, as in the case of a request for an in-line image.
+Accept-Language: he Accept-Language header is information about the user's language preferences that is passed via HTTP when a document is requested. Mainstream browsers allow these language preferences to be modified by the user.
+Cookie: An HTTP cookie (also called web cookie, Internet cookie, browser cookie or simply cookie) is a small piece of data sent from a website and stored in the user's web browser while the user is browsing. Cookies were designed to be a reliable mechanism for websites to remember stateful information (such as items added in the shopping cart in an online store) or to record the user's browsing activity (including clicking particular buttons, logging in, or recording which pages were visited in the past).
+If-Modified-Since: The if modified since header is a HTTP header that is sent to a server as a conditional request. If the content has not changed the server responds by providing only the headers with a 304 status code. If the content has changed the server responds to the request with a 200 status code and the entire requested document / resource.
 
 12. What are the parts of an HTTP response message?
+HTTP messages are simple, formatted blocks of data. Each message contains either a request from a client or a response from a server. They consist of three parts: a start line describing the message, a block of headers containing attributes, and an optional body containing data.
 
 13. Which category does each range of HTTP status code belong to?
+There are five different categories of status codes on an HTTP response: 
+100-199 Informational 
+200-299 Successful 
+300-399 Redirection
+400-499 Client Error 
+500-599 Server Error 
 
 14. Make a list of the most common status codes with a little description of each of them.
+HTTP ERROR 500 (INTERNAL SERVER ERROR)
+The description of this error pretty much says it all. It’s a general-purpose error message for when a web server encounters some form of internal error. For example, the web server could be overloaded and therefore unable to handle requests properly.
+HTTP ERROR 404 (NOT FOUND)
+Most people are bound to recognize this one. A 404 error happens when you try to access a resource on a web server (usually a web page) that doesn’t exist. Some reasons for this happening can for example be a broken link, a mistyped URL, or that the webmaster has moved the requested page somewhere else (or deleted it). To counter the ill effect of broken links, some websites set up custom pages for them (and some of those are really cool).
+HTTP ERROR 403 (FORBIDDEN)
+This error is similar to the 401 error, but note the difference between unauthorized and forbidden. In this case no login opportunity was available. This can for example happen if you try to access a (forbidden) directory on a website.
+HTTP ERROR 400 (BAD REQUEST)
+This is basically an error message from the web server telling you that the application you are using (e.g. your web browser) accessed it incorrectly or that the request was somehow corrupted on the way.
+HTTP ERROR 401 (UNAUTHORIZED)
+This error happens when a website visitor tries to access a restricted web page but isn’t authorized to do so, usually because of a failed login attempt.

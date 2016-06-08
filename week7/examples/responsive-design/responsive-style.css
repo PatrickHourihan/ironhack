@@ -1,0 +1,102 @@
+body {
+	background-image:url('images/small-oranges.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.row {
+margin-left: -20px;
+}
+[class*="span"] {
+display: inline;
+float: left;
+margin-left: 20px;
+}
+
+.span-one-third {
+		width: 75%;
+        margin-left: 21px; 
+}
+
+.text {
+	font-size: 18px;
+	color: white;
+	background-color: blue;
+}
+    
+@media screen and (min-width: 320px) {
+    body {
+		background-image:url('images/strawberries-and-bananas.jpg');
+    }
+
+    .span-one-third {
+        width: 50%;
+    }
+    .container {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    body {
+		background-image:url('images/small-limes.jpg');
+    }
+
+    .span-one-third {
+        width: 50%;
+    }
+    .container {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+		background-image:url('images/many-lemons.jpg');
+    }
+    .span-one-third {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+		background-image:url('images/many-salmonberries.jpg');
+    }
+
+    .text {
+		font-size:36px;
+		color: pink;
+		background-color: green;
+	}
+    .span-one-third {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+		background-image:url('images/big-oranges.jpg');
+    } 
+}
+
+.box1 {
+	background-color: yellow;
+    border-radius: 25px;
+}
+
+.box2 {
+	background-color: red;
+    border-radius: 25px;
+}
+
+.box3 {
+	background-color: green;
+    border-radius: 25px;
+}

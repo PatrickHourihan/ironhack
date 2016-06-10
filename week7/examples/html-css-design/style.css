@@ -1,0 +1,88 @@
+.post {
+    width: 500px;
+    padding: 20px;
+    background-color: #F5F5F5;
+    font-size: 18px;
+    color: grey;
+    border-style: solid;
+    border-color: #aaa;
+}
+
+.post-details {
+	width: 400px;
+	margin: 20px;
+    padding: 10px;
+    background-color: white;
+    font-size: 24px;
+    color: black;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+}
+
+.button {
+	width: 40px;
+	height: 40px;
+	border-radius: 25px;
+}
+
+.square-button {
+	width: 40px;
+	height: 40px;
+}
+
+.comment-button {
+	width: 20px;
+	height: 20px;
+}
+
+.grey-button {
+	width: 30px;
+	height: 30px;
+	border-radius: 25px;
+}
+
+.comments {
+	font-size: 14px;
+    color: grey;
+}
+
+.currency {
+	background-color: #F3AB4C;
+	color: white;
+	border-radius: 20px;
+}
+
+.amount {
+	background-color: white;
+	color: #F3AB4C;
+	font-size: 16px;
+}
+
+.time {
+	color: #F64F5A;
+	font-size: 12px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    padding: 5px;
+}
+
+.html-or-css {
+	color: #aaa;
+	font-size: 12px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    padding: 5px;
+}
+
+.comment-box {
+	color: #2889D8;
+	font-size: 16px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #2889D8;
+    border-radius: 25px;
+    padding: 10px;
+}

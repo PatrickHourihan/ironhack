@@ -1,0 +1,30 @@
+header {
+	background-color: red;
+	font-family: "Brawler";
+}
+
+footer {
+	background-color: yellow;
+}
+
+section {
+	font-family: "Wire One";
+}
+
+H1 {
+	background-color: green;
+	font-family: "Baskerville";
+}
+
+#author {
+  background-color: pink;
+  font-size: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#finalParagraph {
+  background-color: grey;
+  font-family: "Damion";
+  font-size: 10px;
+}

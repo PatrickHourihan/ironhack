@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Movie Lovers</title>
+</head>
+<body>
+	<span class="master">
+		<div class="container-fluid page">
+			<span class="page">
+				<header>
+					<span class="header">
+						<div>
+							<p class="navbar-text navbar-right">
+								<a href="#" class="navbar-link">Home</a> | 
+								<a href="#" class="navbar-link">About</a> | 
+								<a href="#" class="navbar-link">Contact</a>	| 
+								<img src="https://s.yimg.com/iu/api/res/1.2/zEmPgaWdv66GHGagvO68bQ--/YXBwaWQ9eXZpZGVvO2ZpPXVsY3JvcDt3PTYzMDtoPTM1NDtkeD0xO2R5PTE7Y3c9MTI3OTtjaD03MTk7cT03MDtuPTE7cm90YXRlPWF1dG8-/https://s.yimg.com/ea/img/-/150720/mick_1aqp4bm-1aqp4bq.jpg" alt="mick-fanning-shark" width=75px height=75ps></a>
+							</p>
+						</div>
+					</span>
+				</header>
+			</span>
+	  	</div>
+	</span>
+
+	<article>
+		<% @filter_movies.each do | movie| %>
+			<% if movie.year==@correct_movie.year%>
+				<img src="<%=movie.poster%>" onClick="alert('yay')" width="100px">
+			<%else%>
+				<img src="<%=movie.poster%>" onClick="alert('nay')" width="100px">
+			<% end %>
+		<% end %>
+		<section>
+			<h1>Which one of these movies was released in the year <%=@correct_movie.year%>?</h1>
+		</section>
+	</article>
+	<article>
+		<div class="center">
+		<form action="http://localhost:4567/search">
+    		<input type="submit" value="click here to begin your search">
+		</form>
+		</div>
+	</article>
+</body>
+</html>

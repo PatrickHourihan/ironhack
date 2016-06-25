@@ -8,13 +8,40 @@
 </head>
 <body>
 
-<div><center>
-<%= link_to "Home", help_path %>
-<%= link_to "Become a Host", become_a_host_path %>
-<%= link_to "Help", help_path %>
-<%= link_to "Sign Up",sign_up_path %>
-<%= link_to "Log in", log_in_path %>
-</center></div>
+<div class="container-fluid">
+
+	<div class="row header">
+
+  		<div class="col-sm-1"><center>
+			<%= link_to " add logo ", '/' %>
+		</center></div>
+
+		<div class="col-sm-6">
+			"Where are you going _____ ?"
+		</center></div>
+
+		<div class="col-sm-1">
+			<%= link_to "Become a Host", become_a_host_path %>
+		</center></div>
+
+		<div class="col-sm-1">
+			<%= link_to "Wish Lists", wish_lists_path %>	
+		</center></div>
+
+		<div class="col-sm-1">
+				<%= link_to "Help", help_path %>
+		</center></div>
+
+		<div class="col-sm-1">
+				<%= link_to "Sign Up",sign_up_path %>
+		</center></div>
+
+		<div class="col-sm-1">
+				<%= link_to "Log in", log_in_path %>
+		</center></div>
+
+	</div>
+</div>
 
 <%= yield %>
 

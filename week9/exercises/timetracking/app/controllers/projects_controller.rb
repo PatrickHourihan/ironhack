@@ -16,4 +16,20 @@ class ProjectsController < ApplicationController
 
 		redirect_to '/projects'
 	end
+
+	def show
+		@project = Project.find_by(id:params[:id])
+		unless @project
+			render 'no_projects_found'
+		end
+	end
+
+	# def show
+	# 	begin
+	# 		@project = Project.find(params[:id])
+	# 	rescue ActiveRecord::RecordNotFound
+	# 		render 'no_projects_found'
+	# 		# redirect_to '/projects'
+	# 	end
+	# end
 end

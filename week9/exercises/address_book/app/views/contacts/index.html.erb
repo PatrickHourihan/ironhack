@@ -1,0 +1,9 @@
+<h1>Were you looking for a list of all the contacts?</h1>
+
+<p><% @contacts.each do |contact| %>
+		<%= contact.name %>
+		<br>
+	<% end %>
+</p>
+
+<p><a href="http://localhost:3000/contacts/new">Add new contact</a></p>

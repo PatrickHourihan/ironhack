@@ -1,10 +1,9 @@
 class ContactsController < ApplicationController
   def index
-  	@contacts = Contact.show_contacts
+  	@contacts = Contact.show_contact
   end
 
   def new
-
   end
 
   def create 
@@ -17,5 +16,9 @@ class ContactsController < ApplicationController
     contact.save
 
     redirect_to("/contacts")
+  end
+
+  def show
+    @contacts = Contact
   end
 end

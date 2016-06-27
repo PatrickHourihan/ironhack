@@ -14,15 +14,25 @@
 // You can use 'result' variable to store the resulting letter.
 // If your code works, the last three equalities will be "true"
 
-
-
+/*
 
 function dniLetter( dni ) {
 
-	var lockup = 'TRWAGMYFPDXBNJZSQVHLCKE';
-	var result = '';
+	var error;
 
-	
+		if (isNaN(dni)) {
+			error = true;
+		} else if (dni.toString().length < 8) {
+			error=true;
+		}
+
+		if (error) {
+			return 'Invalid parameter';
+		}
+
+		var lockup = 'TRWAGMYFPDXBNJZSQVHLCKE';
+		var remainder = dni % 23;
+		var result = lockup[remainder];
 
 		return result;
 }
@@ -31,8 +41,7 @@ console.log( dniLetter( 12345678 ) === 'Z');
 console.log( dniLetter( 34667892 ) === 'S');
 console.log( dniLetter( 92234488 ) === 'A');
 
-
-
+*/
 
 //EXERCISE 2
 //
@@ -48,7 +57,6 @@ console.log( dniLetter( "A1234567" ) === 'Invalid parameter');
 
 */
 
-
 //EXERCISE 3
 //
 // Restore the comments marks (/* */) of the previous exercises. First two exercises have to be commented 
@@ -56,17 +64,27 @@ console.log( dniLetter( "A1234567" ) === 'Invalid parameter');
 // Open the console and reload the index page to see the result of the code.
 // Write a function that takes an array of words and returns the length of the longest one.
 
-/*
 
 function findLongestWord( array_words ){
 
+	var i;
+	var length;
+	var longest = 0;
+
+	for (i = 0; i < array_words.length; i++) {
+		length = array_words[i].length;
+
+		if (length > longest) {
+			longest = length;
+		}
+	}
+	return longest;
 }
 
-console.log( findLongestWord( ["Richie", "Joanie", "Greg", "Marcia", "Bobby"] ) ===6 );
+console.log( findLongestWord( ["Richie", "Joanie", "Greg", "Marcia", "Bobby"] ) === 6 );
 console.log( findLongestWord( ["Blanka", "Zangief", "Chun Li", "Guile"] ) === 7 );
 console.log( findLongestWord( ["Red", "Blue", "Green"] ) === 5 );
 
-*/
 
 //EXERCISE 4
 //
@@ -76,12 +94,13 @@ console.log( findLongestWord( ["Red", "Blue", "Green"] ) === 5 );
 // You have to complete the calculateAverage function (it is a few lines below), and it has
 // to return the average of every number in a array instead of the "Not implemented yet" message.
 
-/*
+
 
 var array_lengths = [];
 array_lengths.push( findLongestWord( ["Richie", "Joanie", "Greg", "Marcia", "Bobby"]) );
 array_lengths.push( findLongestWord( ["Blanka", "Zangief", "Chun Li", "Guile"] ) );
 array_lengths.push( findLongestWord( ["Red", "Blue", "Green"] ) );
+// array_lengths.push( findLongestWord( ["Me", "Myself", "Irene", "Yabbazabbabrand"] ) );
 //<place to add more lines>, read next commented text and you will understand
 
 console.log( "These are the longest lengths of each group: " + array_lengths );
@@ -89,7 +108,8 @@ console.log( calculateAverage( array_lengths ) === 6 && "The average of longest 
 
 function calculateAverage( array )
 {
-	return( "Not implemented yet" )
+	var sum = array.reduce(function(prev, next, index, array) {return prev + next});
+		return ( sum / array.length);
 }
 
 // Now add more lengths to the array_lengths. You have to do it where <place to add more lines> is written. 
@@ -97,7 +117,7 @@ function calculateAverage( array )
 // Don't foget to add words to the array. The longer the better!
 // Now reload the page and see how changed the average.
 
-*/
+
 
 
 //EXERCISE 5

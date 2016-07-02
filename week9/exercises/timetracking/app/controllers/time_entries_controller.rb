@@ -1,11 +1,20 @@
 class TimeEntriesController < ApplicationController
 
-# belongs_to :project
-# validates :project, presence: true
-# validates :hours, :minutes, presence: true, numericality: true
+	def create 
+		@project = Project.find(params[:project_id])
+		time_entry_params = params.require(:time_entry).permit(
+				:hours, :minutes, :date
+			)
+		@time_entry = @project.time_entries.new(time_entry_params)
+		if @time_entry.save
+			redirect_to project_time_entries_path(@project)
+		else
+			render 'new'
+		end
+	end
 
 	def index
-		@project = Project.find(params[:id])
+		@project = Project.find(params[:project_id])
 		@time_entries = @project.time_entries
 	end
 

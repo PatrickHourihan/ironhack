@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Index</title>
+</head>
+<body>
+	<h1><%= @project.name %></h1>
+
+	<ul>
+		<% @time_entries.each do |time_entry| %>
+			<li>
+				Hours: 
+				<%= time_entry.hours %>
+				<br>
+				Minutes: 
+				<%= time_entry.minutes %>
+				<br>
+			</li>
+		<% end %>
+	</ul>
+</body>
+</html>
+
+

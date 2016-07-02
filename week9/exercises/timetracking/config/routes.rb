@@ -3,10 +3,7 @@ Rails.application.routes.draw do
   get '/' => 'site#home'
   get '/contact' => 'site#contact'
 
-  get '/projects' => 'projects#index'
-  get '/projects/new' => 'projects#new'
-  post 'projects' => 'projects#create'
-
-  get '/projects/:id' => 'projects#show'
-
+  	resources :projects, only: [:index, :show, :new, :create] do 
+  		resources :time_entries, only: [:index, :new, :create]
+  	end
 end

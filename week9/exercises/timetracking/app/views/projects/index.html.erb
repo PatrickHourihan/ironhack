@@ -1,12 +1,22 @@
-<h1>This is a list of the 10 most recent projects</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Index</title>
+</head>
+<body>
+	<h1>This is a list of the 10 most recent projects</h1>
 
-<ul>
-	<% @projects.each do |project| %>
-			<li> <strong><%= project.name %></strong>
+	<ul>
+		<% @projects.each do |project| %>
+			<li> <strong><%= link_to(project.name, project_time_entries_path(project)) %></strong>
 				<% if project.description.present? %>
 					- <%= project.description %> 
 				<% end %>
 			</li>
-			<br>
+		<br>
 	<% end %>
 </ul>
+</body>
+</html>
+

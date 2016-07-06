@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Timetracking</title>
+</head>
+<body>
+	<% if time_entry.errors.any? %>
+		<ul>
+			<% time_entry.errors.full_messages.each do |error_msg| %> 
+			<li><%= error_msg %></li>
+			<% end %>
+		</ul>
+	<% end %>
+
+	<%= form_for [@project, @time_entry] do |f| %>
+		<%= f.label :hours %>
+		<%= f.text_field :hours, size: 4 %>
+		<br>
+		<%= f.label :minutes %>
+		<%= f.text_field :minutes, size: 4 %>
+		<br>
+		<%= f.label :date %>
+		<%= f.date_field :date %>
+		<br>
+		<%= f.label :comments %>
+		<%= f.text_area :comments %>
+		<br>
+
+		<%= f.submit 'Save' %>
+		<%= link_to 'Cancel', project_time_entries_path(@project) %>
+	<% end %>
+</body>
+</html>

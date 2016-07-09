@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Music Concert Network</title>
+</head>
+<body>
+	<h1>Upcoming concerts</h1>
+
+	<ul>
+		<% @concert.each do |concert| %>
+			<li> 
+				<strong><%= link_to(concert.artist, concert_path(concert)) %></strong> <br>
+				<strong><%= concert.venue %></strong> <br>
+				<strong><%= concert.date.strftime("%A, %B %d, %Y @ %I:%M") %></strong> 
+			</li>
+		<br>
+	<% end %>
+	</ul>
+</body>
+</html>

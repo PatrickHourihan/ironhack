@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Music Concert Network</title>
+</head>
+<body>
+	<h4>How much are you willing to spend tonight?</h4>
+	<h6>Name your price:</h6>
+
+	<%= form_for [@concert, @price] do |f| %>
+		<%= f.label :price %>
+		<%= f.text_field :price %>
+		<%= f.submit 'Save' %>
+	<% end %>
+</body>
+</html>

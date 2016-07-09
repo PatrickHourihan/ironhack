@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Auction Site</title>
+</head>
+<body>
+	<h1> <%= @product.title %> </h1>
+	<h3> <%= @product.description%> </h3>
+	<h4> <%= @product.deadline %> </h4>
+
+	<%= form_for [@product, @bid] do |f| %>
+		<%= f.label :amount %>
+		<%= f.text_field :amount %>
+		<br>
+		<%= f.submit 'Save' %>
+
+	<% end %>
+
+</body>
+</html>

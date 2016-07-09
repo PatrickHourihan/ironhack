@@ -41,6 +41,7 @@ class TimeEntriesController < ApplicationController
 	end
 
 	def destroy
+		flash[:hello] = "World"
 		# find time entry
 		@project = Project.find(params[:project_id])
 		@time_entry = @project.time_entries.find(params[:id])

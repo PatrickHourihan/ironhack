@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Auction site</title>
+</head>
+<body>
+	<p>New user, enter info:</p>
+
+	<%= form_for [@user] do |f| %>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+		<br>
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+		<br>
+		<%= f.submit 'Save' %>
+
+	<% end %>
+
+
+</body>
+</html>

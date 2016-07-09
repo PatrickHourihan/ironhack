@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Auction Site</title>
+</head>
+<body>
+	<h1>This is a list of the most recent products</h1>
+
+	<ul>
+		<% @products.each do |product| %>
+			<li> <strong> <%=link_to product.title,user_product_path(@user,product)%></strong>
+				<% if product.description.present? %>
+					- <%= product.description %> 
+				<% end %>
+			</li>
+		<br>
+	<% end %>
+	</ul>
+</body>
+</html>

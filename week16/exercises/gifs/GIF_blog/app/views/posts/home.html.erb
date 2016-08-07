@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GIF Blog</title>
+</head>
+<body>
+	<h2>Below are the highest rated posts.</h2>
+
+	<h4>You can sort through the posts, either by date or by number of votes.</h4>
+
+<!-- 	<button name="button" type"submit" action"sortByDate">Sort by Date</button>
+	<button name="button" type"submit" action"sortByVotes">Sort by Votes</button> -->
+
+	<p>
+		<button type="submit">Sort By Date</button>
+		<button type="submit">Sort By Votes</button>
+	</p>
+
+	<% @minimumVotes.each do | post | %>
+		<%= image_tag(post.gif_url, size: "350x350") %>
+	<% end %>
+
+	<p><%= link_to "new post", new_post_path %></p>
+	<p><%= link_to "show all posts", posts_path %></p>
+</body>
+</html>

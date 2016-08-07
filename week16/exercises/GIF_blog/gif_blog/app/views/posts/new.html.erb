@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GIFblog</title>
+</head>
+<body>
+
+	<p>Enter a gif url:</p>
+
+	<%= form_for [@post] do |f| %>
+		<%= f.label :gif_url %>
+		<%= f.text_field :gif_url %>
+		<br>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+		<br>
+		<%= f.submit 'Save' %>
+
+	<% end %>
+
+	<p><%= link_to("Back to All", posts_path) %></p>
+
+</body>
+</html>

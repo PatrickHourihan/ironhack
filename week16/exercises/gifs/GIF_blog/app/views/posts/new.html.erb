@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GIF Blog</title>
+</head>
+<body>
+	<h2>Create a new GIF</h2>
+	<%= form_for @post do | f | %>
+		<div>
+			<%= f.label :title %>
+			<%= f.text_field :title %>
+		</div>
+
+		<div>
+		<%= f.label :gif_url %> 
+		<%= f.text_field :gif_url %>
+		</div>
+		
+		<div>
+		<%= f.submit %>
+		</div>
+	<% end %>
+	<p><%= link_to "home", "/" %></p>
+	<p><%= link_to "show all posts", posts_path %></p>
+</body>
+</html>

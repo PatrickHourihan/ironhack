@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GIF Blog</title>
+</head>
+<body>
+	<h2>Here are all of the posts</h2>
+	<% @posts.each do | post | %>
+		<p>
+			<h4><%= post.title %> | <%= link_to "Vote!", post_path(post) %></h4>
+			<%= image_tag(post.gif_url, size: "200x200") %>
+			<h6>Vote Count: <%= post.votes %></h6>
+		</p>
+	<% end %>
+	<p><%= link_to "home", "/" %></p>
+	<p><%= link_to "new post", new_post_path %></p>
+</body>
+</html>
+
+

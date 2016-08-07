@@ -14,7 +14,13 @@ class PostsController < ApplicationController
 		@sortByVotes = @posts.sort_by &:votes
 	end
 
-	
+	def sortbyDate
+
+	end
+
+	def sortByVotes
+
+	end
 
 	def create
 		@post = Post.new(post_params)

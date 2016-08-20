@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sandwichr</title>
+</head>
+<body>
+	<h1>
+		Your sandwich is a: 
+		<%= @sandwich.name %>
+	</h1>
+	<ul>
+		<li><h3>Bread Type: <%= @sandwich.bread_type%></h3></li>
+		<li><h3>Calories: <text class="total-calories" data-total-calories="<%= @sandwich.total_calories%>"><%= @sandwich.total_calories%></text></h3></li>
+		<li><h3>Ingredients: </h3><% @ingredients.each do | singleIngredient | %>
+		<ul class=ingredient-list>
+			<li><h5><%= singleIngredient.name %>, <%= singleIngredient.calories%> cals</h5></li>
+		</ul>
+	<% end %>
+	</ul>
+
+	<h1 class="sandwich" data-sandwich-id="<%= @sandwich.id %>">
+		Want to add new ingredients?
+	</h1>
+	<ul>
+		<div>
+			<% @all_ingredients.each do | ingredient | %>
+				<button class="add-ingredient" data-ingredient-id="<%= ingredient.id%>"> 
+				<%= ingredient.name  %>
+			</button>
+			<% end %>
+		</div>
+	</ul>
+
+
+<%= link_to "back to the list of sandwiches", sandwiches_path %>
+
+
+</body>
+</html>

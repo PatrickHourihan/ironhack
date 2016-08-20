@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sandwichr</title>
+</head>
+<body>
+	<h1>This is a list of all of the sandwiches currently in the database:</h1>
+
+	<ul>
+		<% @sandwiches.each do | singleSub | %>
+			<li data-sandwich-id=<%= singleSub.id %>> <%= link_to "#{singleSub.name}", sandwich_path(singleSub.id) %> </li>
+		<% end %>
+	</ul>
+</body>
+</html>
